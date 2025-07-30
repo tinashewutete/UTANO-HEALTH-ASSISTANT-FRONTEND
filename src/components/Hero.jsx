@@ -19,7 +19,7 @@ function App() {
     setAnswer('');
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/answer', {
+      const response = await axios.post('https://utano-health-assistant-backend.onrender.com/api/answer', {
         question: question,
       });
       setAnswer(response.data.answer);
