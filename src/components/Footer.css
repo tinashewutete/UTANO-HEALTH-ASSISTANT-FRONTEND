@@ -1,0 +1,73 @@
+/* *{
+    font: "Montserrati,sans serif";
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+.footer{
+    background-color: #178DFF;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+.footer h3{
+    font-weight: 700;
+    padding: 10px;
+}
+.footer p{
+    font-weight: 400;
+    
+} */
+
+
+/* Reset and global styles */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #178DFF;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer h3 {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+
+  .footer p {
+    font-size: 0.6rem;
+  }
+}

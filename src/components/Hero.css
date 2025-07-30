@@ -1,0 +1,177 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5faff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Ensure full-screen for container */
+.app-container {
+  min-height: 90vh;
+  width: 100vw;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Hero section */
+.hero-text {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #080808;
+}
+
+.hero-text h1 span {
+  color: #178DFF;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Form section */
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+form input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 0.5px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #e6effc;
+  color: #0e1013;
+  width: 100%;
+  box-sizing: border-box;
+}
+form input:focus {
+  outline: none;
+  border-color: #007BFF; 
+  box-shadow: 0 0 0 2px rgba(23, 143, 255, 0.123); 
+}
+/* Button */
+form button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Error */
+.error-message {
+  margin-top: 1rem;
+  color: red;
+}
+
+/* Answer */
+.answer-container {
+  margin-top: 5rem;
+  background-color: #e9f2ff;
+  border-left: 4px solid #007BFF;
+  padding: 1rem;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 1000px;
+
+}
+
+.answer-container h2 {
+  margin-top: 0;
+  color: #007BFF;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  form textarea {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  form button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  form textarea {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  form button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .answer-container {
+    font-size: 0.8rem;
+  }
+}
