@@ -11,25 +11,25 @@ function App() {
   const [answer, setAnswer] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setError('');
+  setAnswer('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
-    setAnswer('');
+  try {
+    const response = await axios.post('https://utano-health-assistant-backend.onrender.com/api/answer', {
+      question: question,
+    });
+    setAnswer(response.data.answer);
+  } catch (err) {
+    console.error(err);
+    setError('Error getting answer. Please try again.');
+  } finally {
+    setLoading(false);
+  }
+};
 
-    try {
-      const response = await axios.post('https://utano-health-assistant-backend.onrender.com/api/answer', {
-        question: question,
-      });
-      setAnswer(response.data.answer);
-    } catch (err) {
-      console.error(err);
-      setError('Error getting answer. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="app-container">
